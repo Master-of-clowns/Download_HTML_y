@@ -122,9 +122,16 @@ def settings():
             "S3_PREFIX": "yandex-video",
             "S3_URL_MODE": "presigned",
             "S3_PUBLIC_BASE_URL": "",
-            "YANDEX_PROXY_URL": "",
         }.items()
     }
+    # Настройки парсера задаются здесь, а параметры S3 — через окружение.
+    cfg.update(
+        YANDEX_PROXY_URL="",
+        FETCH_TIMEOUT_SECONDS=30,
+        FETCH_ATTEMPTS=3,
+        MAX_HTML_BYTES=20971520,
+        RENDER_TIMEOUT_SECONDS=60,
+    )
     if not cfg["S3_BUCKET"] or "/" in cfg["S3_BUCKET"]:
         raise ParserError("Укажите S3_BUCKET в .env или окружении.")
     if cfg["S3_URL_MODE"] not in {"presigned", "public"}:
@@ -142,10 +149,6 @@ def settings():
             raise ParserError(f"{name}: нужен HTTPS-адрес без ключей и параметров.")
     for name, default in {
         "S3_URL_TTL_SECONDS": 86400,
-        "FETCH_TIMEOUT_SECONDS": 30,
-        "FETCH_ATTEMPTS": 3,
-        "MAX_HTML_BYTES": 20971520,
-        "RENDER_TIMEOUT_SECONDS": 60,
     }.items():
         try:
             cfg[name] = int(os.getenv(name, str(default)))
