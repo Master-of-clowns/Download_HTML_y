@@ -1,3 +1,4 @@
 boto3>=1.35,<2
 httpx>=0.28,<0.29
 python-dotenv>=1,<2
+playwright>=1.55,<2

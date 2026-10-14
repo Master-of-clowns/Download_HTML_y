@@ -1,6 +1,6 @@
 .env
 .venv
+.browsers/
 __pycache__/
 *.pyc
-input.json
 result.json
