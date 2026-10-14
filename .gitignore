@@ -6,3 +6,5 @@ __pycache__/
 result.json
 *.xlsx
 .DS_Store
+runs*/
+.pytest_cache/
