@@ -6,9 +6,6 @@
 python3 -m pip install -r requirements.txt
 ```
 
-```bash
-python3 run.py input.json
-```
 Установите переменные среды с ключами корзины:
 ```bash
 read -rs 'AWS_ACCESS_KEY_ID?Введи Access Key ID: '; echo
@@ -26,6 +23,13 @@ export S3_URL_TTL_SECONDS='86400'
 ```
 
 Или укажи ключи и параметры S3 в файле `.env` рядом с `run.py`. Настройки парсера заданы в коде.
+
+Сам запуск:
+
+```bash
+python3 run.py input.json
+```
+
 
 При первом запуске Chromium установится автоматически. Результат сохранится в `result.json`.
 
