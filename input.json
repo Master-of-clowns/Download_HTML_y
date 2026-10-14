@@ -1,0 +1,32 @@
+[
+    {
+        "query": "котики",
+        "region_id": 213,
+        "device": "mobile"
+    },
+    {
+        "query": "porn",
+        "region_id": 213,
+        "device": "mobile"
+    },
+    {
+        "query": "котики",
+        "region_id": 213,
+        "device": "desktop"
+    },
+    {
+        "query": "porn",
+        "region_id": 213,
+        "device": "desktop"
+    },
+    {
+        "query": "котики",
+        "region_id": 213,
+        "device": "tablet"
+    },
+    {
+        "query": "porn",
+        "region_id": 213,
+        "device": "tablet"
+    }
+]
