@@ -1,0 +1,9 @@
+
+/* Mobile frame and viewer sizing from the supplied Yandex Old reference. */
+html[data-sbs-device="ANDROID"],html[data-sbs-device="IPHONE"]{background:#d0d0d0!important}
+html:not([data-sbs-device="DESKTOP"]) body{max-width:390px!important;min-height:844px!important;margin:0 auto!important;overflow-x:hidden!important;box-shadow:0 0 40px rgba(0,0,0,.5);position:relative}
+html:not([data-sbs-device="DESKTOP"]) .ViewerScene{width:min(390px,100vw)!important;left:max(0px,calc((100vw - 390px)/2))!important;right:auto!important}
+.ImagesTouchViewer-ImageContainer .ImagesContentImage,.ImagesTouchViewer-ImageContainer .ImagesContentImage-Cover{max-width:100%!important}
+.ImagesTouchViewer-ImageContainer .ImagesViewerImage-ImageElement{min-width:0!important;min-height:0!important;max-width:100%!important;height:auto!important}
+[class*="Distribution"],.SerpPage>:not(.SerpList):not(.ViewerScene):not(.ImagesViewer){display:none!important}
+.YndxBug,#yndxbug,.TechTool,.DevToolsPanel,.MessageBox_layout_tooltip,[role="tooltip"],.ulitochka{display:none!important}

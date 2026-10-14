@@ -1,0 +1,8 @@
+
+/* Mandatory for every export, including dynamically opened viewers.
+   Clear filters on ancestors too: a sharp img can inherit a blurred wrapper. */
+html[data-sbs-unblur="true"],html[data-sbs-unblur="true"] *,
+html[data-sbs-unblur="true"] *::before,html[data-sbs-unblur="true"] *::after{
+  -webkit-filter:none!important;filter:none!important;
+  -webkit-backdrop-filter:none!important;backdrop-filter:none!important;
+}
